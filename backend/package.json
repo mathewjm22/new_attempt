@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "cd ../frontend && npm install && npm run build"
   },
   "dependencies": {
     "express": "^4.19.2",
