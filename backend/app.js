@@ -54,9 +54,9 @@ app.get("/health", (_, res) => res.json({ ok: true }));
 // --- SERVE FRONTEND (optional, for fullstack local dev) --- //
 if (process.env.NODE_ENV === "production") {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
-  app.use(express.static(path.join(__dirname, "../frontend/build")));
+  app.use(express.static(path.join(__dirname, "../dist")));
   app.get("*", (_, res) =>
-    res.sendFile(path.join(__dirname, "../frontend/build/index.html"))
+    res.sendFile(path.join(__dirname, "../dist/index.html"))
   );
 }
 
